@@ -8,6 +8,5 @@ fi
 mkdir lib/$1
 mv lib/APPNAME.pm lib/$1.pm
 
-find .  \;
 find . ! -path '*/\.*' ! -name bootstrap.sh -exec sed -i "s/APPNAME/$1/g" {} \;
 
